@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class ProjectRepositoryIT {
+public class ProjectRepositoryITTest {
 
 
     @Autowired
