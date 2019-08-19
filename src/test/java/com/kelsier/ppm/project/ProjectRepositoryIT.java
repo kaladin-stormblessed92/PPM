@@ -52,6 +52,16 @@ public class ProjectRepositoryIT {
         assertEquals(1,projects.size());
     }
 
+    @Test
+    public void deleteById(){
+        try{
+            projectRepository.deleteById(projectSaved.getId());
+        }catch (Error e){
+            throw new Error("Failed to delete Project");
+        }
+
+    }
+
     @After
     public void tearDown(){
         projectRepository.deleteAll();
