@@ -14,9 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.times;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class ProjectServiceImplTest {
 
@@ -67,6 +65,10 @@ public class ProjectServiceImplTest {
 
     @Test
     public void deleteProject() {
+       doNothing().when(projectRepository).deleteById(PROJECT_ID);
+       projectServiceImpl.deleteProject(PROJECT_ID);
+       verify(projectRepository).deleteById(PROJECT_ID);
+
     }
 
     @Test

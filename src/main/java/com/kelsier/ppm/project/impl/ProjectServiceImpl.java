@@ -41,7 +41,7 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public void deleteProject(long id) {
-
+        projectRepository.deleteById(id);
     }
 
     @Override
